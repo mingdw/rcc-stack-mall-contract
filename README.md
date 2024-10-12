@@ -1,17 +1,17 @@
-# Sample Hardhat Project
+# RCC stake contract
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a Hardhat Ignition module that deploys that contract.
-
-Try running some of the following tasks:
+操作流程以及命令
 
 ```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat ignition deploy ./ignition/modules/Lock.js
-```
+git clone https://github.com/ProjectsTask/rcc-stake-contract
 
-```
-npx hardhat ignition deploy ./ignition/modules/Lock.js --network sepolia --verify
+npm install
+## 编译
+npx hardhat compile
+##  部署Rcc token
+npx hardhat ignition deploy ./ignition/modules/Rcc.js
+## 部署完Rcc Token,token 的地址作为stake 合约的初始化参数,
+## 设置好RCCStake.js 中的参数
+## 将stake合约部署到sepolia上
+ npx hardhat run scripts/RCCStake.js --network sepolia
 ```
