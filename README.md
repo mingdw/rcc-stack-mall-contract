@@ -36,8 +36,6 @@ const RccToken = "0x264e0349deEeb6e8000D40213Daf18f8b3dF02c3";
 
 ## 将 stake 合约部署到 sepolia 上
 
-npx hardhat run scripts/RCCStake.js --network sepolia
-
 ```
-
+npx hardhat run scripts/RCCStake.js --network sepolia
 ```
