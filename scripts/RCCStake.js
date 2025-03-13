@@ -2,7 +2,7 @@ const { ethers, upgrades } = require("hardhat");
 
 async function main() {
   //  部署获取到的Rcc Token 地址
-  const RccToken = "0x264e0349deEeb6e8000D40213Daf18f8b3dF02c3";
+  const RccToken = "0xb345C90046974FcDeC85cfe30B9DeDA138206Fbc";
   // 质押起始区块高度,可以去sepolia上面读取最新的区块高度
   const startBlock = 6529999;
   // 质押结束的区块高度,sepolia 出块时间是12s,想要质押合约运行x秒,那么endBlock = startBlock+x/12

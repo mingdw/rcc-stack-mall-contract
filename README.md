@@ -39,3 +39,19 @@ const RccToken = "0x264e0349deEeb6e8000D40213Daf18f8b3dF02c3";
 ```
 npx hardhat run scripts/RCCStake.js --network sepolia
 ```
+
+## 生成abi
+
+```
+npm install -g solc
+solcjs --abi ./contracts/Rcc.sol -o ./abi/
+solcjs --abi ./contracts/RCCStake.sol -o ./abi/
+```
+
+## 使用abigen生成go代码
+
+```
+abigen --abi ./abi/Rcc.abi --pkg rcc --type RccToken --out ./go/rcc.go
+abigen --abi ./abi/RCCStake.abi --pkg rccstake --type RCCStake --out ./go/rccstake.go
+```
+
