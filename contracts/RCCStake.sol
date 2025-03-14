@@ -342,6 +342,13 @@ contract RCCStake is
     }
 
     /**
+     * @notice Get all pools
+     */
+    function getAllPools() external view returns(Pool[] memory) {
+        return pool;
+    }
+
+    /**
      * @notice Return reward multiplier over given _from to _to block. [_from, _to)
      *
      * @param _from    From block number (included)
